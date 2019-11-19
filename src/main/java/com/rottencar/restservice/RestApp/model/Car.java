@@ -4,14 +4,12 @@ public class Car {
 
     private String name;
     private String brand;
+    private Integer id;
 
-    public Car() {
-
-    }
-
-    public Car(String name, String brand) {
+    public Car(String name, String brand, Integer id) {
         this.name = name;
         this.brand = brand;
+        this.id = id;
     }
 
     public String getName() {
@@ -28,5 +26,13 @@ public class Car {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

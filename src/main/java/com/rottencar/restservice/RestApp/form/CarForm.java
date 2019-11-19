@@ -4,6 +4,7 @@ public class CarForm {
 
     private String name;
     private String brand;
+    private Integer id;
 
     public String getName() {
         return name;
@@ -19,5 +20,13 @@ public class CarForm {
 
     public void setBrand(String brand) {
         this.brand = brand;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
