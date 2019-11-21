@@ -1,6 +1,7 @@
 package com.rottencar.restservice.RestApp.dao;
 
 import com.rottencar.restservice.RestApp.model.Car;
+import com.rottencar.restservice.RestApp.model.indexes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +12,8 @@ public class CarDAO extends DAO<Car> {
 
     public static List<Car> cars = new ArrayList<>();
     static {
-        cars.add(new Car(new String("Multipla"), new String("Fiat"), 0));
-        cars.add(new Car(new String("Robin"), new String("Reliant"), 1));
+        cars.add(new Car(new String("Multipla"), new String("Fiat"), indexes.getId()));
+        cars.add(new Car(new String("Robin"), new String("Reliant"), indexes.getId()));
     }
 
 
@@ -33,6 +34,7 @@ public class CarDAO extends DAO<Car> {
 
     @Override
     public void save(Car car) {
+        car.setId(indexes.getId());
         cars.add(car);
     }
 
